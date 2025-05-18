@@ -5,6 +5,7 @@ import { Outlet, createRootRouteWithContext } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 
 import Header from '../shared/ui/Header';
+import { themeClass } from '../apps/styles/theme.css';
 
 export type RouterContext = {
   queryClient: QueryClient;
@@ -18,7 +19,7 @@ export const Route = createRootRouteWithContext<RouterContext>()({
 function Layout() {
   return (
     <>
-      <div>
+      <div className={themeClass}>
         <Header />
         <main>
           <Outlet />
